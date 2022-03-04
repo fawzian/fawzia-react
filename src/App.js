@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Axios from "axios"
 
 function App() {
+  var url = `https://docs.openaq.org/v2/cities?limit=100&page=1&offset=0&sort=asc&country_id=US&order_by=city`
+  
+  async function getCities(){
+    var result = await Axios.get(url);
+    console.log(result.data)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<h1 onClick={getCities}>hello world</h1>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import './App.css';
 import Axios from "axios"
 import { useState } from 'react';
+import CityCard from './CityCard';
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
 
       <div>
         {cities.map((city) => {
-          return <p>{city["city"]}</p>;
+          return <CityCard city={city}/>
         })}
       </div>
     </div>

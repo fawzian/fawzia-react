@@ -2,6 +2,9 @@ import './App.css';
 import Axios from "axios"
 import { useState } from 'react';
 import CityCard from './CityCard';
+import Home from './Home';
+import Locations from './Locations';
+
 
 function App() {
 
@@ -24,7 +27,12 @@ function App() {
   }
 
   return (
+    
     <div className="app" onSubmit={onSubmit}>
+
+<Home />
+    <Locations />
+
       <h1 onClick={getCities} className="headline">Air Quality in Canada</h1><br/>
       <h2 className="details">Data is strictly from between the dates of January 1st 2000 and March 3rd 2022. <br/>The information is provided in descending order.</h2>
       <form className="form">

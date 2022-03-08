@@ -25,10 +25,10 @@ function App() {
 
   return (
     <div className="app" onSubmit={onSubmit}>
-      <h1 onClick={getCities} className="headline">USA AIR QUALITY</h1>
-      <h2 className="details"></h2>
+      <h1 onClick={getCities} className="headline">Air Quality in Canada</h1><br/>
+      <h2 className="details">Data is strictly from between the dates of January 1st 2000 and March 3rd 2022. <br/>The information is provided in descending order.</h2>
       <form className="form">
-        <input type="text" className="input" placeholder="how many cities" value={query} onChange={(e) => setquery(e.target.value)}/>
+        <input type="text" className="input" placeholder="numbers only ex. 8" value={query} onChange={(e) => setquery(e.target.value)}/>
         <input className="submit" type="submit" value="Get List" />
 
       </form>

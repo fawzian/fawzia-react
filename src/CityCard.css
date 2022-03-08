@@ -1,0 +1,22 @@
+.cityCard{
+/* height: 200px;
+width: 300px; */
+object-fit: cover;
+border-radius: 4px;
+padding: 10px;
+margin: auto;
+
+width:350px;
+min-height:150px;
+max-height: cover;
+background:#ECEFF1;
+box-shadow: 10px 10px rgba(0,0,0,0.2);
+}
+
+.subheading{
+    color: #1aa7ec;
+    max-width: 300px;
+    text-align: center;
+    margin: 12px 0px;
+    padding: 3px;
+}

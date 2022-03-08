@@ -5,6 +5,8 @@
   justify-content: center;
   align-items: center;
   padding: 40px 24px;
+  background-color:#66D0FF;
+  width: 100%;
 }
 
 .form {
@@ -26,4 +28,23 @@
   border: 2px solid #89cff0;
   border-radius: 4px;
   color: #ffffff;
+}
+
+.submit:hover{
+  padding: 6px 16px;
+  font-size: 15px;
+  margin-left: 6px;
+  background-color: #ffffff;
+  border: 2px solid #89cff0;
+  border-radius: 4px;
+  color: #89cff0;
+  cursor: pointer;
+}
+
+.app_cities{
+  margin-top: 24px;
+  display: grid;
+  grid-gap: 100px;
+  grid-template-columns: 330px 330px;
+  align-items: baseline;
 }

@@ -1,17 +1,39 @@
 import './App.css';
 import Axios from "axios"
+import { useState } from 'react';
 
 function App() {
-  var url = `https://docs.openaq.org/v2/cities?limit=100&page=1&offset=0&sort=asc&country_id=US&order_by=city`
+
+  const [query, setquery] = useState("");
+  const [cities, setcities] = useState([]);
+
+
+  var url = `https://docs.openaq.org/v2/cities?limit=${query}&page=1&offset=0&sort=asc&country_id=CA&order_by=city`
   
   async function getCities(){
     var result = await Axios.get(url);
-    console.log(result.data)
+    setcities(result.data.results);
+    console.log(result.data.results)
+  }
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    getCities();
   }
 
   return (
-    <div className="App">
-<h1 onClick={getCities}>hello world</h1>
+    <div className="app" onSubmit={onSubmit}>
+      <h1 onClick={getCities}>USA AIR QUALITY</h1>
+      <form className="form">
+        <input type="text" className="input" placeholder="how many cities" value={query} onChange={(e) => setquery(e.target.value)}/>
+        <input className="submit" type="submit" value="Get List" />
+      </form>
+
+      <div>
+        {cities.map((city) => {
+          return <p>{city["city"]}</p>;
+        })}
+      </div>
     </div>
   );
 }

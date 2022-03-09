@@ -2,8 +2,7 @@ import React from 'react'
 import Axios from "axios"
 import { useState } from 'react';
 import CityCard from './CityCard';
-import { Link } from "react-router-dom";
-import Locations from './Locations';
+
 
 
 export default function Home() {

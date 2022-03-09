@@ -1,6 +1,7 @@
 import React from 'react';
 import './CityCard.css';
 
+
 export default function CityCard( { city } ) {
     return (
         <div className="cityCard">
